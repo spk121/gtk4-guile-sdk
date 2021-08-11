@@ -5,7 +5,7 @@ ENV TERM dumb
 ENV VERBOSE true
 ENV TZ America/Los_Angeles
 
-RUN dnf upgrade
+RUN dnf -y upgrade
 RUN dnf -y groupinstall "Development Tools"
 RUN dnf -y install wget xz gmp-devel libunistring-devel \
   libffi-devel readline-devel gc-devel dbus-tools meson \
